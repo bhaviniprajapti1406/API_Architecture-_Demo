@@ -15,6 +15,7 @@ namespace API.WEB.Controllers
             _studentsRepository = studentsRepository;
         }
 
+
         [HttpPost]
         //[Route("AddEmployee")]
         public async Task<IActionResult> Post(Students std)
@@ -22,6 +23,7 @@ namespace API.WEB.Controllers
             var result = await _studentsRepository.AddAsync(std);            
             return Ok("Added Successfully");
         }
+
 
         [HttpGet]
         //[Route("GetEmployee")]
